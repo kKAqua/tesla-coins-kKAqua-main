@@ -1,0 +1,118 @@
+#pragma version 8
+intcblock 0 1
+bytecblock 0x43726561746f72 0x41737365744944
+txna ApplicationArgs 0
+pushbytes 0x240d2f67 // "create(uint64)void"
+==
+bnz main_l6
+txna ApplicationArgs 0
+pushbytes 0xfe89cff8 // "asset_opt_in()void"
+==
+bnz main_l5
+txna ApplicationArgs 0
+pushbytes 0x42a1342d // "disallow_transfer()void"
+==
+bnz main_l4
+err
+main_l4:
+txn OnCompletion
+intc_0 // NoOp
+==
+txn ApplicationID
+intc_0 // 0
+!=
+&&
+assert
+callsub disallowtransfercaster_5
+intc_1 // 1
+return
+main_l5:
+txn OnCompletion
+intc_0 // NoOp
+==
+txn ApplicationID
+intc_0 // 0
+!=
+&&
+assert
+callsub assetoptincaster_4
+intc_1 // 1
+return
+main_l6:
+txn OnCompletion
+intc_0 // NoOp
+==
+txn ApplicationID
+intc_0 // 0
+==
+&&
+assert
+callsub createcaster_3
+intc_1 // 1
+return
+
+// create
+create_0:
+proto 1 0
+bytec_0 // "Creator"
+txn Sender
+app_global_put
+bytec_1 // "AssetID"
+frame_dig -1
+app_global_put
+retsub
+
+// asset_opt_in
+assetoptin_1:
+proto 0 0
+txn Sender
+bytec_0 // "Creator"
+app_global_get
+==
+assert
+itxn_begin
+pushint 4 // axfer
+itxn_field TypeEnum
+bytec_1 // "AssetID"
+app_global_get
+itxn_field XferAsset
+global CurrentApplicationAddress
+itxn_field AssetReceiver
+intc_0 // 0
+itxn_field AssetAmount
+itxn_submit
+retsub
+
+// disallow_transfer
+disallowtransfer_2:
+proto 0 0
+txn Sender
+global CurrentApplicationAddress
+==
+// unauthorized
+assert
+intc_0 // 0
+return
+
+// create_caster
+createcaster_3:
+proto 0 0
+intc_0 // 0
+txna ApplicationArgs 1
+btoi
+frame_bury 0
+frame_dig 0
+callsub create_0
+retsub
+
+// asset_opt_in_caster
+assetoptincaster_4:
+proto 0 0
+callsub assetoptin_1
+retsub
+
+// disallow_transfer_caster
+disallowtransfercaster_5:
+proto 0 0
+callsub disallowtransfer_2
+retsub

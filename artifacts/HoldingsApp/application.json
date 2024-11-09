@@ -1,0 +1,131 @@
+{
+    "hints": {
+        "create(uint64,uint64)void": {
+            "call_config": {
+                "no_op": "CREATE"
+            }
+        },
+        "asset_opt_in()void": {
+            "call_config": {
+                "no_op": "CALL"
+            }
+        },
+        "update_price(uint64)void": {
+            "call_config": {
+                "no_op": "CALL"
+            }
+        },
+        "sell_tokens(address,uint64,pay)void": {
+            "call_config": {
+                "no_op": "CALL"
+            }
+        }
+    },
+    "source": {
+        "approval": "I3ByYWdtYSB2ZXJzaW9uIDgKaW50Y2Jsb2NrIDAgMSA0CmJ5dGVjYmxvY2sgMHg0MTczNzM2NTc0NDk0NCAweDQzNzI2NTYxNzQ2ZjcyIDB4NTA3MjY5NjM2NQp0eG5hIEFwcGxpY2F0aW9uQXJncyAwCnB1c2hieXRlcyAweDk0NzlmZjYzIC8vICJjcmVhdGUodWludDY0LHVpbnQ2NCl2b2lkIgo9PQpibnogbWFpbl9sOAp0eG5hIEFwcGxpY2F0aW9uQXJncyAwCnB1c2hieXRlcyAweGZlODljZmY4IC8vICJhc3NldF9vcHRfaW4oKXZvaWQiCj09CmJueiBtYWluX2w3CnR4bmEgQXBwbGljYXRpb25BcmdzIDAKcHVzaGJ5dGVzIDB4YTU3ODE4MTggLy8gInVwZGF0ZV9wcmljZSh1aW50NjQpdm9pZCIKPT0KYm56IG1haW5fbDYKdHhuYSBBcHBsaWNhdGlvbkFyZ3MgMApwdXNoYnl0ZXMgMHg3NzA2Y2ZhNyAvLyAic2VsbF90b2tlbnMoYWRkcmVzcyx1aW50NjQscGF5KXZvaWQiCj09CmJueiBtYWluX2w1CmVycgptYWluX2w1Ogp0eG4gT25Db21wbGV0aW9uCmludGNfMCAvLyBOb09wCj09CnR4biBBcHBsaWNhdGlvbklECmludGNfMCAvLyAwCiE9CiYmCmFzc2VydApjYWxsc3ViIHNlbGx0b2tlbnNjYXN0ZXJfNwppbnRjXzEgLy8gMQpyZXR1cm4KbWFpbl9sNjoKdHhuIE9uQ29tcGxldGlvbgppbnRjXzAgLy8gTm9PcAo9PQp0eG4gQXBwbGljYXRpb25JRAppbnRjXzAgLy8gMAohPQomJgphc3NlcnQKY2FsbHN1YiB1cGRhdGVwcmljZWNhc3Rlcl82CmludGNfMSAvLyAxCnJldHVybgptYWluX2w3Ogp0eG4gT25Db21wbGV0aW9uCmludGNfMCAvLyBOb09wCj09CnR4biBBcHBsaWNhdGlvbklECmludGNfMCAvLyAwCiE9CiYmCmFzc2VydApjYWxsc3ViIGFzc2V0b3B0aW5jYXN0ZXJfNQppbnRjXzEgLy8gMQpyZXR1cm4KbWFpbl9sODoKdHhuIE9uQ29tcGxldGlvbgppbnRjXzAgLy8gTm9PcAo9PQp0eG4gQXBwbGljYXRpb25JRAppbnRjXzAgLy8gMAo9PQomJgphc3NlcnQKY2FsbHN1YiBjcmVhdGVjYXN0ZXJfNAppbnRjXzEgLy8gMQpyZXR1cm4KCi8vIGNyZWF0ZQpjcmVhdGVfMDoKcHJvdG8gMiAwCmJ5dGVjXzEgLy8gIkNyZWF0b3IiCnR4biBTZW5kZXIKYXBwX2dsb2JhbF9wdXQKYnl0ZWNfMCAvLyAiQXNzZXRJRCIKZnJhbWVfZGlnIC0yCmFwcF9nbG9iYWxfcHV0CmJ5dGVjXzIgLy8gIlByaWNlIgpmcmFtZV9kaWcgLTEKYXBwX2dsb2JhbF9wdXQKcmV0c3ViCgovLyBhc3NldF9vcHRfaW4KYXNzZXRvcHRpbl8xOgpwcm90byAwIDAKdHhuIFNlbmRlcgpieXRlY18xIC8vICJDcmVhdG9yIgphcHBfZ2xvYmFsX2dldAo9PQphc3NlcnQKaXR4bl9iZWdpbgppbnRjXzIgLy8gYXhmZXIKaXR4bl9maWVsZCBUeXBlRW51bQpieXRlY18wIC8vICJBc3NldElEIgphcHBfZ2xvYmFsX2dldAppdHhuX2ZpZWxkIFhmZXJBc3NldApnbG9iYWwgQ3VycmVudEFwcGxpY2F0aW9uQWRkcmVzcwppdHhuX2ZpZWxkIEFzc2V0UmVjZWl2ZXIKaW50Y18wIC8vIDAKaXR4bl9maWVsZCBBc3NldEFtb3VudAppdHhuX3N1Ym1pdApyZXRzdWIKCi8vIHVwZGF0ZV9wcmljZQp1cGRhdGVwcmljZV8yOgpwcm90byAxIDAKdHhuIFNlbmRlcgpieXRlY18xIC8vICJDcmVhdG9yIgphcHBfZ2xvYmFsX2dldAo9PQphc3NlcnQKYnl0ZWNfMiAvLyAiUHJpY2UiCmZyYW1lX2RpZyAtMQphcHBfZ2xvYmFsX3B1dApyZXRzdWIKCi8vIHNlbGxfdG9rZW5zCnNlbGx0b2tlbnNfMzoKcHJvdG8gMyAwCmZyYW1lX2RpZyAtMQpndHhucyBBbW91bnQKZnJhbWVfZGlnIC0yCmJ5dGVjXzIgLy8gIlByaWNlIgphcHBfZ2xvYmFsX2dldAoqCj49CmFzc2VydApnbG9iYWwgQ3VycmVudEFwcGxpY2F0aW9uQWRkcmVzcwpieXRlY18wIC8vICJBc3NldElEIgphcHBfbG9jYWxfZ2V0CmZyYW1lX2RpZyAtMgo+PQphc3NlcnQKaXR4bl9iZWdpbgppbnRjXzIgLy8gYXhmZXIKaXR4bl9maWVsZCBUeXBlRW51bQpieXRlY18wIC8vICJBc3NldElEIgphcHBfZ2xvYmFsX2dldAppdHhuX2ZpZWxkIFhmZXJBc3NldApmcmFtZV9kaWcgLTMKaXR4bl9maWVsZCBBc3NldFJlY2VpdmVyCmZyYW1lX2RpZyAtMgppdHhuX2ZpZWxkIEFzc2V0QW1vdW50Cml0eG5fc3VibWl0CnJldHN1YgoKLy8gY3JlYXRlX2Nhc3RlcgpjcmVhdGVjYXN0ZXJfNDoKcHJvdG8gMCAwCmludGNfMCAvLyAwCmR1cAp0eG5hIEFwcGxpY2F0aW9uQXJncyAxCmJ0b2kKZnJhbWVfYnVyeSAwCnR4bmEgQXBwbGljYXRpb25BcmdzIDIKYnRvaQpmcmFtZV9idXJ5IDEKZnJhbWVfZGlnIDAKZnJhbWVfZGlnIDEKY2FsbHN1YiBjcmVhdGVfMApyZXRzdWIKCi8vIGFzc2V0X29wdF9pbl9jYXN0ZXIKYXNzZXRvcHRpbmNhc3Rlcl81Ogpwcm90byAwIDAKY2FsbHN1YiBhc3NldG9wdGluXzEKcmV0c3ViCgovLyB1cGRhdGVfcHJpY2VfY2FzdGVyCnVwZGF0ZXByaWNlY2FzdGVyXzY6CnByb3RvIDAgMAppbnRjXzAgLy8gMAp0eG5hIEFwcGxpY2F0aW9uQXJncyAxCmJ0b2kKZnJhbWVfYnVyeSAwCmZyYW1lX2RpZyAwCmNhbGxzdWIgdXBkYXRlcHJpY2VfMgpyZXRzdWIKCi8vIHNlbGxfdG9rZW5zX2Nhc3RlcgpzZWxsdG9rZW5zY2FzdGVyXzc6CnByb3RvIDAgMApwdXNoYnl0ZXMgMHggLy8gIiIKaW50Y18wIC8vIDAKZHVwCnR4bmEgQXBwbGljYXRpb25BcmdzIDEKZnJhbWVfYnVyeSAwCnR4bmEgQXBwbGljYXRpb25BcmdzIDIKYnRvaQpmcmFtZV9idXJ5IDEKdHhuIEdyb3VwSW5kZXgKaW50Y18xIC8vIDEKLQpmcmFtZV9idXJ5IDIKZnJhbWVfZGlnIDIKZ3R4bnMgVHlwZUVudW0KaW50Y18xIC8vIHBheQo9PQphc3NlcnQKZnJhbWVfZGlnIDAKZnJhbWVfZGlnIDEKZnJhbWVfZGlnIDIKY2FsbHN1YiBzZWxsdG9rZW5zXzMKcmV0c3Vi",
+        "clear": "I3ByYWdtYSB2ZXJzaW9uIDgKcHVzaGludCAwIC8vIDAKcmV0dXJu"
+    },
+    "state": {
+        "global": {
+            "num_byte_slices": 2,
+            "num_uints": 2
+        },
+        "local": {
+            "num_byte_slices": 0,
+            "num_uints": 0
+        }
+    },
+    "schema": {
+        "global": {
+            "declared": {
+                "asset_id": {
+                    "type": "uint64",
+                    "key": "AssetID",
+                    "descr": "TESLA asset ID"
+                },
+                "creator": {
+                    "type": "bytes",
+                    "key": "Creator",
+                    "descr": "Contract creator address"
+                },
+                "global_text": {
+                    "type": "bytes",
+                    "key": "GlobalText",
+                    "descr": "global state text"
+                },
+                "price": {
+                    "type": "uint64",
+                    "key": "Price",
+                    "descr": "Price per TESLA token"
+                }
+            },
+            "reserved": {}
+        },
+        "local": {
+            "declared": {},
+            "reserved": {}
+        }
+    },
+    "contract": {
+        "name": "HoldingsApp",
+        "methods": [
+            {
+                "name": "create",
+                "args": [
+                    {
+                        "type": "uint64",
+                        "name": "asset_id"
+                    },
+                    {
+                        "type": "uint64",
+                        "name": "initial_price"
+                    }
+                ],
+                "returns": {
+                    "type": "void"
+                }
+            },
+            {
+                "name": "asset_opt_in",
+                "args": [],
+                "returns": {
+                    "type": "void"
+                }
+            },
+            {
+                "name": "update_price",
+                "args": [
+                    {
+                        "type": "uint64",
+                        "name": "new_price"
+                    }
+                ],
+                "returns": {
+                    "type": "void"
+                }
+            },
+            {
+                "name": "sell_tokens",
+                "args": [
+                    {
+                        "type": "address",
+                        "name": "buyer"
+                    },
+                    {
+                        "type": "uint64",
+                        "name": "amount"
+                    },
+                    {
+                        "type": "pay",
+                        "name": "payment"
+                    }
+                ],
+                "returns": {
+                    "type": "void"
+                }
+            }
+        ],
+        "networks": {}
+    },
+    "bare_call_config": {}
+}

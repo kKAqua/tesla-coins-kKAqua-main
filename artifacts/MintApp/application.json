@@ -1,0 +1,154 @@
+{
+    "hints": {
+        "create()void": {
+            "call_config": {
+                "no_op": "CREATE"
+            }
+        },
+        "update_addresses(address,address)void": {
+            "call_config": {
+                "no_op": "CALL"
+            }
+        },
+        "mint(uint64)void": {
+            "call_config": {
+                "no_op": "CALL"
+            }
+        },
+        "transfer(address,uint64)void": {
+            "call_config": {
+                "no_op": "CALL"
+            }
+        },
+        "burn(uint64)void": {
+            "call_config": {
+                "no_op": "CALL"
+            }
+        }
+    },
+    "source": {
+        "approval": "I3ByYWdtYSB2ZXJzaW9uIDgKaW50Y2Jsb2NrIDAgMQpieXRlY2Jsb2NrIDB4NTQ2Zjc0NjE2YzUzNzU3MDcwNmM3OSAweDQzNzI2NTYxNzQ2ZjcyIDB4NDE3MzczNjU3NDQzNzI2NTYxNzQ2NTY0IDB4NDg2ZjZjNjQ2OTZlNjc0MTY0NjQ3MjY1NzM3MyAweDQyNzU3MjZlNDE2NDY0NzI2NTczNzMgMHgKdHhuYSBBcHBsaWNhdGlvbkFyZ3MgMApwdXNoYnl0ZXMgMHg0YzVjNjFiYSAvLyAiY3JlYXRlKCl2b2lkIgo9PQpibnogbWFpbl9sMTAKdHhuYSBBcHBsaWNhdGlvbkFyZ3MgMApwdXNoYnl0ZXMgMHgyNWQ3MWE3ZSAvLyAidXBkYXRlX2FkZHJlc3NlcyhhZGRyZXNzLGFkZHJlc3Mpdm9pZCIKPT0KYm56IG1haW5fbDkKdHhuYSBBcHBsaWNhdGlvbkFyZ3MgMApwdXNoYnl0ZXMgMHhiOThiOTA1ZiAvLyAibWludCh1aW50NjQpdm9pZCIKPT0KYm56IG1haW5fbDgKdHhuYSBBcHBsaWNhdGlvbkFyZ3MgMApwdXNoYnl0ZXMgMHg5ZmVlNzQxOCAvLyAidHJhbnNmZXIoYWRkcmVzcyx1aW50NjQpdm9pZCIKPT0KYm56IG1haW5fbDcKdHhuYSBBcHBsaWNhdGlvbkFyZ3MgMApwdXNoYnl0ZXMgMHg3ZjFkNDNlMSAvLyAiYnVybih1aW50NjQpdm9pZCIKPT0KYm56IG1haW5fbDYKZXJyCm1haW5fbDY6CnR4biBPbkNvbXBsZXRpb24KaW50Y18wIC8vIE5vT3AKPT0KdHhuIEFwcGxpY2F0aW9uSUQKaW50Y18wIC8vIDAKIT0KJiYKYXNzZXJ0CmNhbGxzdWIgYnVybmNhc3Rlcl85CmludGNfMSAvLyAxCnJldHVybgptYWluX2w3Ogp0eG4gT25Db21wbGV0aW9uCmludGNfMCAvLyBOb09wCj09CnR4biBBcHBsaWNhdGlvbklECmludGNfMCAvLyAwCiE9CiYmCmFzc2VydApjYWxsc3ViIHRyYW5zZmVyY2FzdGVyXzgKaW50Y18xIC8vIDEKcmV0dXJuCm1haW5fbDg6CnR4biBPbkNvbXBsZXRpb24KaW50Y18wIC8vIE5vT3AKPT0KdHhuIEFwcGxpY2F0aW9uSUQKaW50Y18wIC8vIDAKIT0KJiYKYXNzZXJ0CmNhbGxzdWIgbWludGNhc3Rlcl83CmludGNfMSAvLyAxCnJldHVybgptYWluX2w5Ogp0eG4gT25Db21wbGV0aW9uCmludGNfMCAvLyBOb09wCj09CnR4biBBcHBsaWNhdGlvbklECmludGNfMCAvLyAwCiE9CiYmCmFzc2VydApjYWxsc3ViIHVwZGF0ZWFkZHJlc3Nlc2Nhc3Rlcl82CmludGNfMSAvLyAxCnJldHVybgptYWluX2wxMDoKdHhuIE9uQ29tcGxldGlvbgppbnRjXzAgLy8gTm9PcAo9PQp0eG4gQXBwbGljYXRpb25JRAppbnRjXzAgLy8gMAo9PQomJgphc3NlcnQKY2FsbHN1YiBjcmVhdGVjYXN0ZXJfNQppbnRjXzEgLy8gMQpyZXR1cm4KCi8vIGNyZWF0ZQpjcmVhdGVfMDoKcHJvdG8gMCAwCmJ5dGVjXzEgLy8gIkNyZWF0b3IiCnR4biBTZW5kZXIKYXBwX2dsb2JhbF9wdXQKcmV0c3ViCgovLyB1cGRhdGVfYWRkcmVzc2VzCnVwZGF0ZWFkZHJlc3Nlc18xOgpwcm90byAyIDAKdHhuIFNlbmRlcgpieXRlY18xIC8vICJDcmVhdG9yIgphcHBfZ2xvYmFsX2dldAo9PQphc3NlcnQKYnl0ZWNfMyAvLyAiSG9sZGluZ0FkZHJlc3MiCmZyYW1lX2RpZyAtMgphcHBfZ2xvYmFsX3B1dApieXRlYyA0IC8vICJCdXJuQWRkcmVzcyIKZnJhbWVfZGlnIC0xCmFwcF9nbG9iYWxfcHV0CnJldHN1YgoKLy8gbWludAptaW50XzI6CnByb3RvIDEgMAp0eG4gU2VuZGVyCmJ5dGVjXzEgLy8gIkNyZWF0b3IiCmFwcF9nbG9iYWxfZ2V0Cj09CmFzc2VydApieXRlY18yIC8vICJBc3NldENyZWF0ZWQiCmFwcF9nbG9iYWxfZ2V0CmludGNfMCAvLyAwCj09CmFzc2VydApieXRlY18wIC8vICJUb3RhbFN1cHBseSIKYnl0ZWNfMCAvLyAiVG90YWxTdXBwbHkiCmFwcF9nbG9iYWxfZ2V0CmZyYW1lX2RpZyAtMQorCmFwcF9nbG9iYWxfcHV0CmJ5dGVjXzIgLy8gIkFzc2V0Q3JlYXRlZCIKaW50Y18xIC8vIDEKYXBwX2dsb2JhbF9wdXQKcHVzaGJ5dGVzIDB4NGQ2OTZlNzQ2NTY0MjAgLy8gIk1pbnRlZCAiCmZyYW1lX2RpZyAtMQppdG9iCmNvbmNhdApwdXNoYnl0ZXMgMHgyMDU0NDU1MzRjNDEyMDYzNmY2OTZlNzMgLy8gIiBURVNMQSBjb2lucyIKY29uY2F0CmxvZwpyZXRzdWIKCi8vIHRyYW5zZmVyCnRyYW5zZmVyXzM6CnByb3RvIDIgMAp0eG4gU2VuZGVyCmJ5dGVjXzEgLy8gIkNyZWF0b3IiCmFwcF9nbG9iYWxfZ2V0Cj09CmFzc2VydApieXRlY18yIC8vICJBc3NldENyZWF0ZWQiCmFwcF9nbG9iYWxfZ2V0CmludGNfMSAvLyAxCj09CmFzc2VydApieXRlY18wIC8vICJUb3RhbFN1cHBseSIKYXBwX2dsb2JhbF9nZXQKZnJhbWVfZGlnIC0xCj49CmFzc2VydApmcmFtZV9kaWcgLTIKYnl0ZWNfMyAvLyAiSG9sZGluZ0FkZHJlc3MiCmFwcF9nbG9iYWxfZ2V0Cj09CmFzc2VydApieXRlY18wIC8vICJUb3RhbFN1cHBseSIKYnl0ZWNfMCAvLyAiVG90YWxTdXBwbHkiCmFwcF9nbG9iYWxfZ2V0CmZyYW1lX2RpZyAtMQotCmFwcF9nbG9iYWxfcHV0CnB1c2hieXRlcyAweDU0NzI2MTZlNzM2NjY1NzI3MjY1NjQyMCAvLyAiVHJhbnNmZXJyZWQgIgpmcmFtZV9kaWcgLTEKaXRvYgpjb25jYXQKcHVzaGJ5dGVzIDB4MjA3NDZmMjAgLy8gIiB0byAiCmNvbmNhdApmcmFtZV9kaWcgLTIKY29uY2F0CmxvZwpyZXRzdWIKCi8vIGJ1cm4KYnVybl80Ogpwcm90byAxIDAKdHhuIFNlbmRlcgpieXRlY18xIC8vICJDcmVhdG9yIgphcHBfZ2xvYmFsX2dldAo9PQphc3NlcnQKYnl0ZWNfMCAvLyAiVG90YWxTdXBwbHkiCmFwcF9nbG9iYWxfZ2V0CmZyYW1lX2RpZyAtMQo+PQphc3NlcnQKdHhuYSBBY2NvdW50cyAxCmJ5dGVjIDQgLy8gIkJ1cm5BZGRyZXNzIgphcHBfZ2xvYmFsX2dldAo9PQphc3NlcnQKYnl0ZWNfMCAvLyAiVG90YWxTdXBwbHkiCmJ5dGVjXzAgLy8gIlRvdGFsU3VwcGx5IgphcHBfZ2xvYmFsX2dldApmcmFtZV9kaWcgLTEKLQphcHBfZ2xvYmFsX3B1dApwdXNoYnl0ZXMgMHg0Mjc1NzI2ZTY1NjQyMCAvLyAiQnVybmVkICIKZnJhbWVfZGlnIC0xCml0b2IKY29uY2F0CnB1c2hieXRlcyAweDIwNjY3MjZmNmQyMDczNzU3MDcwNmM3OSAvLyAiIGZyb20gc3VwcGx5Igpjb25jYXQKbG9nCnJldHN1YgoKLy8gY3JlYXRlX2Nhc3RlcgpjcmVhdGVjYXN0ZXJfNToKcHJvdG8gMCAwCmNhbGxzdWIgY3JlYXRlXzAKcmV0c3ViCgovLyB1cGRhdGVfYWRkcmVzc2VzX2Nhc3Rlcgp1cGRhdGVhZGRyZXNzZXNjYXN0ZXJfNjoKcHJvdG8gMCAwCmJ5dGVjIDUgLy8gIiIKZHVwCnR4bmEgQXBwbGljYXRpb25BcmdzIDEKZnJhbWVfYnVyeSAwCnR4bmEgQXBwbGljYXRpb25BcmdzIDIKZnJhbWVfYnVyeSAxCmZyYW1lX2RpZyAwCmZyYW1lX2RpZyAxCmNhbGxzdWIgdXBkYXRlYWRkcmVzc2VzXzEKcmV0c3ViCgovLyBtaW50X2Nhc3RlcgptaW50Y2FzdGVyXzc6CnByb3RvIDAgMAppbnRjXzAgLy8gMAp0eG5hIEFwcGxpY2F0aW9uQXJncyAxCmJ0b2kKZnJhbWVfYnVyeSAwCmZyYW1lX2RpZyAwCmNhbGxzdWIgbWludF8yCnJldHN1YgoKLy8gdHJhbnNmZXJfY2FzdGVyCnRyYW5zZmVyY2FzdGVyXzg6CnByb3RvIDAgMApieXRlYyA1IC8vICIiCmludGNfMCAvLyAwCnR4bmEgQXBwbGljYXRpb25BcmdzIDEKZnJhbWVfYnVyeSAwCnR4bmEgQXBwbGljYXRpb25BcmdzIDIKYnRvaQpmcmFtZV9idXJ5IDEKZnJhbWVfZGlnIDAKZnJhbWVfZGlnIDEKY2FsbHN1YiB0cmFuc2Zlcl8zCnJldHN1YgoKLy8gYnVybl9jYXN0ZXIKYnVybmNhc3Rlcl85Ogpwcm90byAwIDAKaW50Y18wIC8vIDAKdHhuYSBBcHBsaWNhdGlvbkFyZ3MgMQpidG9pCmZyYW1lX2J1cnkgMApmcmFtZV9kaWcgMApjYWxsc3ViIGJ1cm5fNApyZXRzdWI=",
+        "clear": "I3ByYWdtYSB2ZXJzaW9uIDgKcHVzaGludCAwIC8vIDAKcmV0dXJu"
+    },
+    "state": {
+        "global": {
+            "num_byte_slices": 4,
+            "num_uints": 2
+        },
+        "local": {
+            "num_byte_slices": 0,
+            "num_uints": 0
+        }
+    },
+    "schema": {
+        "global": {
+            "declared": {
+                "asset_created": {
+                    "type": "uint64",
+                    "key": "AssetCreated",
+                    "descr": "Flag indicating if asset is created"
+                },
+                "burn_address": {
+                    "type": "bytes",
+                    "key": "BurnAddress",
+                    "descr": "Burn contract address"
+                },
+                "creator": {
+                    "type": "bytes",
+                    "key": "Creator",
+                    "descr": "Contract creator address"
+                },
+                "global_text": {
+                    "type": "bytes",
+                    "key": "GlobalText",
+                    "descr": "global state text"
+                },
+                "holding_address": {
+                    "type": "bytes",
+                    "key": "HoldingAddress",
+                    "descr": "Holding contract address"
+                },
+                "total_supply": {
+                    "type": "uint64",
+                    "key": "TotalSupply",
+                    "descr": "Total TESLA coin supply"
+                }
+            },
+            "reserved": {}
+        },
+        "local": {
+            "declared": {},
+            "reserved": {}
+        }
+    },
+    "contract": {
+        "name": "MintApp",
+        "methods": [
+            {
+                "name": "create",
+                "args": [],
+                "returns": {
+                    "type": "void"
+                }
+            },
+            {
+                "name": "update_addresses",
+                "args": [
+                    {
+                        "type": "address",
+                        "name": "holding"
+                    },
+                    {
+                        "type": "address",
+                        "name": "burn"
+                    }
+                ],
+                "returns": {
+                    "type": "void"
+                }
+            },
+            {
+                "name": "mint",
+                "args": [
+                    {
+                        "type": "uint64",
+                        "name": "amount"
+                    }
+                ],
+                "returns": {
+                    "type": "void"
+                }
+            },
+            {
+                "name": "transfer",
+                "args": [
+                    {
+                        "type": "address",
+                        "name": "receiver"
+                    },
+                    {
+                        "type": "uint64",
+                        "name": "amount"
+                    }
+                ],
+                "returns": {
+                    "type": "void"
+                }
+            },
+            {
+                "name": "burn",
+                "args": [
+                    {
+                        "type": "uint64",
+                        "name": "amount"
+                    }
+                ],
+                "returns": {
+                    "type": "void"
+                }
+            }
+        ],
+        "networks": {}
+    },
+    "bare_call_config": {}
+}

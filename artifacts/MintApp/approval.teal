@@ -1,0 +1,269 @@
+#pragma version 8
+intcblock 0 1
+bytecblock 0x546f74616c537570706c79 0x43726561746f72 0x417373657443726561746564 0x486f6c64696e6741646472657373 0x4275726e41646472657373 0x
+txna ApplicationArgs 0
+pushbytes 0x4c5c61ba // "create()void"
+==
+bnz main_l10
+txna ApplicationArgs 0
+pushbytes 0x25d71a7e // "update_addresses(address,address)void"
+==
+bnz main_l9
+txna ApplicationArgs 0
+pushbytes 0xb98b905f // "mint(uint64)void"
+==
+bnz main_l8
+txna ApplicationArgs 0
+pushbytes 0x9fee7418 // "transfer(address,uint64)void"
+==
+bnz main_l7
+txna ApplicationArgs 0
+pushbytes 0x7f1d43e1 // "burn(uint64)void"
+==
+bnz main_l6
+err
+main_l6:
+txn OnCompletion
+intc_0 // NoOp
+==
+txn ApplicationID
+intc_0 // 0
+!=
+&&
+assert
+callsub burncaster_9
+intc_1 // 1
+return
+main_l7:
+txn OnCompletion
+intc_0 // NoOp
+==
+txn ApplicationID
+intc_0 // 0
+!=
+&&
+assert
+callsub transfercaster_8
+intc_1 // 1
+return
+main_l8:
+txn OnCompletion
+intc_0 // NoOp
+==
+txn ApplicationID
+intc_0 // 0
+!=
+&&
+assert
+callsub mintcaster_7
+intc_1 // 1
+return
+main_l9:
+txn OnCompletion
+intc_0 // NoOp
+==
+txn ApplicationID
+intc_0 // 0
+!=
+&&
+assert
+callsub updateaddressescaster_6
+intc_1 // 1
+return
+main_l10:
+txn OnCompletion
+intc_0 // NoOp
+==
+txn ApplicationID
+intc_0 // 0
+==
+&&
+assert
+callsub createcaster_5
+intc_1 // 1
+return
+
+// create
+create_0:
+proto 0 0
+bytec_1 // "Creator"
+txn Sender
+app_global_put
+retsub
+
+// update_addresses
+updateaddresses_1:
+proto 2 0
+txn Sender
+bytec_1 // "Creator"
+app_global_get
+==
+assert
+bytec_3 // "HoldingAddress"
+frame_dig -2
+app_global_put
+bytec 4 // "BurnAddress"
+frame_dig -1
+app_global_put
+retsub
+
+// mint
+mint_2:
+proto 1 0
+txn Sender
+bytec_1 // "Creator"
+app_global_get
+==
+assert
+bytec_2 // "AssetCreated"
+app_global_get
+intc_0 // 0
+==
+assert
+bytec_0 // "TotalSupply"
+bytec_0 // "TotalSupply"
+app_global_get
+frame_dig -1
++
+app_global_put
+bytec_2 // "AssetCreated"
+intc_1 // 1
+app_global_put
+pushbytes 0x4d696e74656420 // "Minted "
+frame_dig -1
+itob
+concat
+pushbytes 0x205445534c4120636f696e73 // " TESLA coins"
+concat
+log
+retsub
+
+// transfer
+transfer_3:
+proto 2 0
+txn Sender
+bytec_1 // "Creator"
+app_global_get
+==
+assert
+bytec_2 // "AssetCreated"
+app_global_get
+intc_1 // 1
+==
+assert
+bytec_0 // "TotalSupply"
+app_global_get
+frame_dig -1
+>=
+assert
+frame_dig -2
+bytec_3 // "HoldingAddress"
+app_global_get
+==
+assert
+bytec_0 // "TotalSupply"
+bytec_0 // "TotalSupply"
+app_global_get
+frame_dig -1
+-
+app_global_put
+pushbytes 0x5472616e7366657272656420 // "Transferred "
+frame_dig -1
+itob
+concat
+pushbytes 0x20746f20 // " to "
+concat
+frame_dig -2
+concat
+log
+retsub
+
+// burn
+burn_4:
+proto 1 0
+txn Sender
+bytec_1 // "Creator"
+app_global_get
+==
+assert
+bytec_0 // "TotalSupply"
+app_global_get
+frame_dig -1
+>=
+assert
+txna Accounts 1
+bytec 4 // "BurnAddress"
+app_global_get
+==
+assert
+bytec_0 // "TotalSupply"
+bytec_0 // "TotalSupply"
+app_global_get
+frame_dig -1
+-
+app_global_put
+pushbytes 0x4275726e656420 // "Burned "
+frame_dig -1
+itob
+concat
+pushbytes 0x2066726f6d20737570706c79 // " from supply"
+concat
+log
+retsub
+
+// create_caster
+createcaster_5:
+proto 0 0
+callsub create_0
+retsub
+
+// update_addresses_caster
+updateaddressescaster_6:
+proto 0 0
+bytec 5 // ""
+dup
+txna ApplicationArgs 1
+frame_bury 0
+txna ApplicationArgs 2
+frame_bury 1
+frame_dig 0
+frame_dig 1
+callsub updateaddresses_1
+retsub
+
+// mint_caster
+mintcaster_7:
+proto 0 0
+intc_0 // 0
+txna ApplicationArgs 1
+btoi
+frame_bury 0
+frame_dig 0
+callsub mint_2
+retsub
+
+// transfer_caster
+transfercaster_8:
+proto 0 0
+bytec 5 // ""
+intc_0 // 0
+txna ApplicationArgs 1
+frame_bury 0
+txna ApplicationArgs 2
+btoi
+frame_bury 1
+frame_dig 0
+frame_dig 1
+callsub transfer_3
+retsub
+
+// burn_caster
+burncaster_9:
+proto 0 0
+intc_0 // 0
+txna ApplicationArgs 1
+btoi
+frame_bury 0
+frame_dig 0
+callsub burn_4
+retsub
